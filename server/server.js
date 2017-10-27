@@ -40,13 +40,12 @@ app.get('/todos/:id', (req, res) => {
   
   Todo.findById(id).then((todo) => {
     if (!todo) {
-      res.status(404).send({});
+      res.status(404).send();
       return console.log('There is no todo with this Id');
     }
     res.send({todo});
-    console.log(todo);
   }, (e) => {
-    res.status(400).send({});
+    res.status(400).send();
     console.log(e);
   });
   // validate id using isValid
