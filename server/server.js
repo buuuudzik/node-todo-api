@@ -58,7 +58,7 @@ app.get('/todos/:id', (req, res) => {
   // error 400 - and send empty body
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log(`Started on port ${port}`);
 });
 
