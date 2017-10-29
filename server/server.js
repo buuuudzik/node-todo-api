@@ -1,4 +1,4 @@
-require('./config/config.js');
+require('./../config/config.js');
 
 const _ = require('lodash');
 const express = require('express');
@@ -109,6 +109,13 @@ app.patch('/todos/:id', (req, res) => {
   }).catch((e) => {
     res.status(400).send();
   });
+});
+
+
+// POST /users
+app.post('/users', (req, res) => {
+  console.log(req.body, res.body);
+  var {email, password} = req.body;
 });
 
 app.listen(port, () => {
